@@ -10,4 +10,7 @@ id_model = os.getenv('ID_MODEL') or sys_exit('Error: .env does not contain ID_MO
 
 agent = Agent(model=OpenRouter(id=id_model))
 
-print(agent)
+if __name__ == '__main__':
+    while question := input('User: ').strip():
+        answer = agent.run(question).content
+        print(f'AI: {answer}')

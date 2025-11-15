@@ -9,6 +9,6 @@ id_model = os.getenv('ID_MODEL') or sys.exit('file .env does not contain ID_MODE
 
 agent = Agent(model=OpenRouter(id=id_model))
 
-while question := input('User: '):
+while question := input('User: ').strip():
     response = agent.run(question)
     print(f'AI: {response.content}')

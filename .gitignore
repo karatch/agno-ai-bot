@@ -2,4 +2,3 @@
 .venv/bin
 .venv
 .env
-openrouter_free_models.py

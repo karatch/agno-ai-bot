@@ -17,10 +17,10 @@ db = SqliteDb(db_file='data.db')
 
 agent = Agent(
     model=OpenRouter(id=id_model),
-    session_id = 'dialog',
+    session_id = 'dialog', # Deutsch
     db=db,
     add_history_to_context=True,
-    num_history_runs=10,
+    num_history_runs=0,
 )
 
 if __name__ == '__main__':

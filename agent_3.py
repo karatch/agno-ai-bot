@@ -1,10 +1,13 @@
-# agent with knowledge
+# agent with added knowledge
 
 import os, sys
 from agno.agent import Agent
+from agno.knowledge import Knowledge
 from agno.knowledge.embedder.sentence_transformer import SentenceTransformerEmbedder
 from agno.models.openrouter import OpenRouter
 from agno.db.sqlite import SqliteDb
+from agno.vectordb.lancedb import LanceDb
+from agno.vectordb.search import SearchType
 from dotenv import load_dotenv
 
 
@@ -15,3 +18,28 @@ id_model = os.getenv('ID_MODEL') or sys.exit('file .env does not contain ID_MODE
 
 # локальный эмбеддер Agno на базе SentenceTransformers
 embedder = SentenceTransformerEmbedder(id='all-MiniLM-L6-v2')
+
+# локальная векторная база LanceDB с гибридным поиском
+vector_db = LanceDb(
+    table_name='text_documents',  # название таблицы для эмбеддингов
+    uri='lancedb_storage',  # локальная папка для LanceDb
+    search_type=SearchType.hybrid,  # гибридный поиск: по смыслу и ключевым словам
+    embedder=embedder  # подключение эмбеддера
+)
+
+#  создаем knowledge, объект базы знаний
+knowledge = Knowledge(vector_db=vector_db)
+knowledge.add_content(path='history.txt')
+
+# агент со знаниями
+agent = Agent(
+    model=OpenRouter(id=id_model),  # подключение модели
+    knowledge=knowledge,  # подключаем базу знаний
+    search_knowledge=True, # разрешаем ее использование
+    debug_mode=False  # выключаем режим отладки (по умолчанию)
+)
+
+question = 'В каком городе проходила первая конференция Agno и сколько стран в ней участвовало?'
+
+response = agent.run(question)
+print(response.content)

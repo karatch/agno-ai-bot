@@ -9,6 +9,7 @@ from agno.db.sqlite import SqliteDb
 from agno.vectordb.lancedb import LanceDb
 from agno.vectordb.search import SearchType
 from dotenv import load_dotenv
+# from agno.knowledge.embedder.openai import OpenAIEmbedder
 
 
 load_dotenv()
@@ -18,6 +19,7 @@ id_model = os.getenv('ID_MODEL') or sys.exit('file .env does not contain ID_MODE
 
 # локальный эмбеддер Agno на базе SentenceTransformers
 embedder = SentenceTransformerEmbedder(id='all-MiniLM-L6-v2')
+# embedder = OpenAIEmbedder(id="text-embedding-3-small")
 
 # локальная векторная база LanceDB с гибридным поиском
 vector_db = LanceDb(
@@ -33,10 +35,10 @@ knowledge.add_content(path='history.txt')
 
 # агент со знаниями
 agent = Agent(
-    model=OpenRouter(id=id_model),  # подключение модели
+    model=OpenRouter(id=id_model, api_key=api_key),  # подключение модели
     knowledge=knowledge,  # подключаем базу знаний
     search_knowledge=True, # разрешаем ее использование
-    debug_mode=False  # выключаем режим отладки (по умолчанию)
+    debug_mode=True  # выключаем режим отладки (по умолчанию)
 )
 
 question = 'В каком городе проходила первая конференция Agno и сколько стран в ней участвовало?'

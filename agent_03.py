@@ -10,6 +10,7 @@ from agno.vectordb.lancedb import LanceDb
 from agno.vectordb.search import SearchType
 from dotenv import load_dotenv
 # from agno.knowledge.embedder.openai import OpenAIEmbedder
+from agno.models.ollama import Ollama
 
 
 load_dotenv()
@@ -35,7 +36,8 @@ knowledge.add_content(path='history.txt')
 
 # агент со знаниями
 agent = Agent(
-    model=OpenRouter(id=id_model, api_key=api_key),  # подключение модели
+    #model=OpenRouter(id=id_model, api_key=api_key),  # подключение модели
+    model=Ollama(id="llama3.2"),
     knowledge=knowledge,  # подключаем базу знаний
     search_knowledge=True, # разрешаем ее использование
     debug_mode=False  # выключаем режим отладки (по умолчанию)

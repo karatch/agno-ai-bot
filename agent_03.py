@@ -32,18 +32,20 @@ vector_db = LanceDb(
 
 #  создаем knowledge, объект базы знаний
 knowledge = Knowledge(vector_db=vector_db)
-knowledge.add_content(path='history.txt')
+knowledge.add_content(path='aliens.txt')
 
 # агент со знаниями
 agent = Agent(
-    #model=OpenRouter(id=id_model, api_key=api_key),  # подключение модели
-    model=Ollama(id="llama3.2"),
+    model=OpenRouter(id=id_model, api_key=api_key),  # подключение модели
+    # model=Ollama(id="llama3.2"),
     knowledge=knowledge,  # подключаем базу знаний
     search_knowledge=True, # разрешаем ее использование
-    debug_mode=False  # выключаем режим отладки (по умолчанию)
+    debug_mode=True  # выключаем режим отладки (по умолчанию)
 )
 
-question = 'В каком городе проходила первая конференция Agno и сколько стран в ней участвовало?'
+# question = 'В каком городе проходила первая конференция Agno? сколько стран в ней участвовало?'
+question = input('User: ').strip()
+
 
 response = agent.run(question)
-print(response.content)
+print(f'Agent: {response.content}')

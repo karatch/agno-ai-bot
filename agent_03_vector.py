@@ -30,7 +30,7 @@ print(f'First numbers: {vector[:10]}')
 text = "Тела с разной массой падают на землю с одинаковым ускорением, равным g."
 vector = embedder.get_embedding(text)
 print(f'Vector dimension: {len(vector)}')
-print(f'First numbers: {vector[:10]}')
+print(f'First numbers: {vector[:]}')
 
 # локальная векторная база LanceDB с гибридным поиском
 # vector_db = LanceDb(

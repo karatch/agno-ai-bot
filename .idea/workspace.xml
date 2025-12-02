@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46ff1954-5cb0-430e-b077-0c68b4df7d0a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/agent_03.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent_03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agent_04.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent_04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/.managed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/.tantivy-meta.lock" beforeDir="false" afterPath="$PROJECT_DIR$/agent_03_knowledge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/.tantivy-writer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/a9cdf488521c4bf99faf7a1138b9c2e5.fast" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/a9cdf488521c4bf99faf7a1138b9c2e5.fieldnorm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/a9cdf488521c4bf99faf7a1138b9c2e5.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/a9cdf488521c4bf99faf7a1138b9c2e5.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/a9cdf488521c4bf99faf7a1138b9c2e5.store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/a9cdf488521c4bf99faf7a1138b9c2e5.term" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_indices/fts/meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_transactions/0-f7aa4210-387f-488f-a577-80e102f26bf6.txn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/_transactions/1-9bc2f074-accf-441b-8f04-9637967e9ad4.txn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lancedb_storage/text_documents.lance/data/001011101100011010111100ef014a4f3d895a9dd5c3cc474a.lance" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,21 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.agent_01.executor": "Run",
-    "Python.agent_02.executor": "Run",
-    "Python.agent_03.executor": "Run",
-    "Python.agent_03_vector.executor": "Run",
-    "Python.agent_04.executor": "Run",
-    "Python.agent_3.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.openrouter_free_models.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.agent_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_02.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_03.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_03_knowledge.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_03_vector.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_04.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.openrouter_free_models.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />

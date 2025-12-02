@@ -32,6 +32,6 @@ agent = Agent(# model=OpenRouter(id=id_model),
               debug_level=1)
 
 if __name__ == '__main__':
-    while question := input('User: ').strip():
-        response = agent.run(question)
+    while query := input('User: ').strip():
+        response = agent.run(query)
         print(f'Agent: {response.content}')

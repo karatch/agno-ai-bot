@@ -10,7 +10,7 @@ from agno.vectordb.lancedb import LanceDb
 from agno.vectordb.search import SearchType
 from dotenv import load_dotenv
 # from agno.knowledge.embedder.openai import OpenAIEmbedder
-# from agno.models.ollama import Ollama
+from agno.models.ollama import Ollama
 
 
 load_dotenv()
